@@ -3,20 +3,38 @@ user=["Denis"]
 password=["12345"]
 
 while True:
-    print("reg-1,avt-2,valja-3")
-    V=int(input())
-    if V==1:
-        print("registreerimine")
-        #
-    elif V==2:
-        print("avt")
-        #
-    elif V==3:
-        print("valja")
-        break
-        #valmis
-    else:
-        print("on vaja valida 1,2 voi 3")#всё
+	print("Reg-1,Avt-2,Välja-3")
+	v=int(input())
+	if v==1:
+		print("Registreerimine")
+		while 1:
+			log=input("Kasutajatunnus")
+			if log not in users:
+				print("Tunnus soobib")
+				break
+			else:
+				print("See nimi juba on olemas listis")	
+		v=input("Arvuti-A või ise-I loob parool")
+		if v.upper()=="A":
+			pas=passautomat()
+		elif v.upper()=="I":			
+			while 1:
+				pas=input("Sisesta oma parool")
+				tulemus=paskontroll(pas)
+				if tulemus==True:
+					users.append(log)
+					passwords.append(pas)
+					break	
+	elif v==2:
+		print("Avtoriseerimine")
+		#
+	elif v==3:
+		print("Välja")
+		break
+		#valmis
+	else:
+		print("On vaja valida 1,2 või 3")# kõik on olemas
+ 
 
 
 
