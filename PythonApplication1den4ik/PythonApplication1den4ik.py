@@ -1,11 +1,12 @@
 from myymodule1 import*
-user=["Denis"]
-password=["12345"]
-
+users=["Denis"]
+passwords=["12345"]
 while True:
-	print("Reg-1,Avt-2,Välja-3")
+	print("Näita kõike -0,Reg-1,signin-2,Välja-3") #0,2,3
 	v=int(input())
-	if v==1:
+	if v==0:
+		koik_kasutajad(users,passwords)
+	elif v==1:
 		print("Registreerimine")
 		while 1:
 			log=input("Kasutajatunnus")
@@ -27,14 +28,17 @@ while True:
 					break	
 	elif v==2:
 		print("Avtoriseerimine")
-		#
+		if passwords.index(pas)==users.index(users):
+			print("Tere tulemast")
+
+
 	elif v==3:
 		print("Välja")
 		break
 		#valmis
 	else:
 		print("On vaja valida 1,2 või 3")# kõik on olemas
- 
+
 
 
 
