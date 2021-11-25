@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>21448550-82e3-4fcf-98f5-08607d9e461d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Toofailedega.py</StartupFile>
+    <StartupFile>PythonApplication1den4ik.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -30,6 +30,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="names1.txt" />
+    <Content Include="password.txt" />
     <Content Include="Texfailedega.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

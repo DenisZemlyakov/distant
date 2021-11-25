@@ -1,6 +1,10 @@
 from myymodule1 import*
-users=["Denis"]
-passwords=["12345"]
+users=loe_failist_listisse("names1.txt")
+passwords=loe_failist_listisse("password.txt")
+print(users) #показывает все именно
+print(passwords) #показывает все пароли
+#users=["Denis"] #user
+#passwords=["12345"] #password
 while True:
 	print("Näita kõike -0,Reg-1,signin-2,Välja-3") #0,2,3
 	v=int(input())
@@ -28,9 +32,8 @@ while True:
 					break	
 	elif v==2:
 		print("Avtoriseerimine")
-		if passwords.index(pas)==users.index(users):
+		if passwords.index(pas)==users.index(user):
 			print("Tere tulemast")
-
 
 	elif v==3:
 		print("Välja")

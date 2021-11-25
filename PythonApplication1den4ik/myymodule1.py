@@ -1,5 +1,30 @@
+
 import random
 #Cоздаем функции
+def loe_failist(file:str)->str:
+	"""loeme tekst failist
+	"""
+	f=open(file,"r")
+	stroka=f.read() #str 4itaet fail kak text primenjaja ne 4itaemie simvoli
+	#stroka=f.readlines() #list sozdaet spisok s kazdoj novoj stro4ki
+	f.close()
+	return stroka
+stroka=loe_failist("Texfailedega.txt")
+print(stroka)
+def loe_failist_listisse(file:str)->list:
+	"""Loeme tekst failist ja salvesta järjendisse
+	"""
+	f=open(file,"r")
+	list_=[]
+	for stroka in f:
+		list_.append(stroka.strip())
+	f.close()
+	return list_
+def faili_sisu_umberkirjutamine(file:str,list_:list):
+	with open(file,"w") as f:
+		for slovo in list_:
+			f.write(slovo+"\n")
+
 def passautomat()->str:
 	"""Пароль создается машиной
 	"""	
@@ -34,3 +59,4 @@ def koik_kasutajad(users,passwords):
 		print(users,end="-")
 		print(passwords[i])
 		i+=1
+

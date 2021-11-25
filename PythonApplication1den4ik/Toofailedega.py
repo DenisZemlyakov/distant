@@ -19,7 +19,6 @@ def loe_failist_listisse(file:str)->list:
 	return list_
 spisok=loe_failist_listisse("Texfailedega.txt")
 print(spisok)
-
 def salvesta_failisse(file:str):
 	f=open(file,"a")
 	text=input("Sisesta tekst:")
